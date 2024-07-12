@@ -1,12 +1,15 @@
-import * as apiFncs from "./api.js";
+import { getWeather } from "./api.js";
+import { displayWeather } from "./dom.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  apiFncs
-    .getWeather()
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
+document
+  .getElementById("weatherForm")
+  .addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const city = document.getElementById("city").value;
+    try {
+      const weatherData = await getWeather(city);
+      displayWeather(weatherData);
+    } catch (error) {
       console.error("Error fetching weather data:", error);
-    });
-});
+    }
+  });

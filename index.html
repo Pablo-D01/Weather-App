@@ -7,7 +7,19 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <h1>Weather App</h1>
+    </header>
+
+    <div class="containter">
+      <form id="weatherForm">
+        <input type="text" id="city" placeholder="Enter city name" required />
+        <button type="submit">Get Weather</button>
+      </form>
+
+      <div id="weatherInfo"></div>
+    </div>
+
     <script type="module" src="/src/script.js"></script>
   </body>
 </html>
