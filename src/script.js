@@ -1,6 +1,15 @@
 import { getWeather } from "./api.js";
 import { displayWeather } from "./dom.js";
 
+async function loadDefaultWeather() {
+  try {
+    const weatherData = await getWeather("Singapore");
+    displayWeather(weatherData);
+  } catch (error) {
+    console.error("Error fetching weather data:", error);
+  }
+}
+
 document
   .getElementById("weatherForm")
   .addEventListener("submit", async (event) => {
@@ -13,3 +22,5 @@ document
       console.error("Error fetching weather data:", error);
     }
   });
+
+document.addEventListener("DOMContentLoaded", loadDefaultWeather);
