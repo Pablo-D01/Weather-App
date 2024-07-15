@@ -1,7 +1,13 @@
 function displayWeather(data) {
   const weatherInfo = document.getElementById("weatherInfo");
-  const tempC = data.currentConditions.temp;
+  const currentConditions = data.currentConditions;
   const country = data.resolvedAddress.split(", ").pop();
+
+  const currentHtml = `
+      <h2>Weather in ${data.address}, ${country}</h2>
+      <p>Current Temperature: ${currentConditions.temp} °C</p>
+      <p>Current Condition: ${currentConditions.conditions}</p>
+  `;
 
   const forecastHtml = data.days
     .slice(1, 8)
@@ -17,13 +23,9 @@ function displayWeather(data) {
     })
     .join("");
 
-  weatherInfo.innerHTML = `
-      <h2>Weather in ${data.address}, ${country}</h2>
-      <p>Current Temperature: ${tempC} °C</p>
-      <p>Current Condition: ${data.currentConditions.conditions}</p>
-      <h3>7-Day Forecast:</h3>
-      <div class="forecast">${forecastHtml}</div>
-  `;
+  weatherInfo.innerHTML =
+    currentHtml +
+    `<h3>7-Day Forecast:</h3><div class="forecast">${forecastHtml}</div>`;
 }
 
 export { displayWeather };
