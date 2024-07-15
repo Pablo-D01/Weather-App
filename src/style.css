@@ -45,8 +45,8 @@ body {
 h1 {
   background: #4caf50;
   color: white;
-  padding: 10px 0;
   margin: 0;
+  padding: 10px;
 }
 
 form {
@@ -85,5 +85,4 @@ form {
   color: white;
   padding: 10px;
   text-align: center;
-  width: 100%;
 }
