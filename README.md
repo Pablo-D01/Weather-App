@@ -15,5 +15,5 @@ This Weather App project is part of The Odin Project's JavaScript curriculum. It
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/weather-app.git
+   git clone https://github.com/Pablo-D01/Weather-App
    ```
