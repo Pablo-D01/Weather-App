@@ -1,6 +1,6 @@
 # Weather App Project
 
-### https://pablo-d01.github.io/Weather-App/
+### Demo: https://pablo-d01.github.io/Weather-App/
 
 ## Overview
 
