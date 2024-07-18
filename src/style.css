@@ -1,11 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Anton", sans-serif;
   text-align: center;
   margin: 0;
   display: flex;
   flex-direction: column;
+  color: #121111;
   min-height: 100vh;
 }
+
 .weather-form {
   margin: 20px auto;
   display: flex;
@@ -25,6 +35,7 @@ body {
   border-radius: 5px;
   font-size: 16px;
   flex: 1;
+  font-family: "Anton", sans-serif;
 }
 
 .submit-button {
@@ -36,6 +47,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  font-family: "Anton", sans-serif;
 }
 
 .submit-button:hover {
@@ -44,7 +56,7 @@ body {
 
 h1 {
   background: #4caf50;
-  color: white;
+  color: #223924;
   margin: 0;
   padding: 10px;
 }
